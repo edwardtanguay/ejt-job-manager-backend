@@ -18,7 +18,7 @@ mongoose.connect(MONGODB_URI, (err) => {
 });
 
 const app = express();
-const port = 3044;
+const port = process.env.PORT || 3044;
 
 app.get('/', (req, res) => {
     res.send('<h1>Job-Manager API</h1>');
